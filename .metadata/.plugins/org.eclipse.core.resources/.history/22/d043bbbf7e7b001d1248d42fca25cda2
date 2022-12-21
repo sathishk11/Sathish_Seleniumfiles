@@ -1,0 +1,9 @@
+package satish12345;
+
+import org.testng.annotations.Test;
+
+public class groups {
+  @Test
+  public void f() {
+  }
+}

@@ -1,0 +1,9 @@
+package Demoqapage;
+
+import org.testng.annotations.Test;
+
+public class Formspage {
+  @Test
+  public void f() {
+  }
+}

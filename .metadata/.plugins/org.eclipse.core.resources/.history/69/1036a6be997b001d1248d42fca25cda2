@@ -1,0 +1,26 @@
+package satish12345;
+
+import java.io.File;
+
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
+public class Extent_Report {
+	ExtentReports extent;
+	ExtentTest logger;
+	@BeforeTest
+	public void bt() {
+		extent = new ExtentReports(System.getProperty("user.dir")+"/test-output/sathish.html",true);
+		extent.loadConfig(new File(System.getProperty("user.dir")+"src/test/java/extent-config.xml"));
+	}
+	
+	
+	
+	
+  @Test
+  public void f() {
+  }
+}

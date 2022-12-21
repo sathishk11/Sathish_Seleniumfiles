@@ -1,0 +1,34 @@
+package Project1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class testadmin {
+	WebDriver wd;
+	
+	@BeforeTest
+	public void BT() throws InterruptedException { 
+		WebDriverManager.chromedriver().setup();
+		wd = new ChromeDriver();
+		wd.get("https://opensource-demo.orangehrmlive.com/");
+		Thread.sleep(3000);
+	}
+	
+  @Test
+  public void Login() throws InterruptedException {
+	  wd.findElement(By.name("username")).sendKeys("Admin");
+	  wd.findElement(By.name("password")).sendKeys("admin123");
+	  Thread.sleep(2000);
+	  wd.findElement(By.xpath("//*[@class='oxd-form-actions orangehrm-login-action']")).click();
+  }
+  @Test
+  public void Admin() throws InterruptedException {
+	  wd.findElement(By.xpath("//*[@class='oxd-sidepanel-body']/ul/li[1]/a/span")).click();
+  }
+  
+}
