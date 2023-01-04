@@ -12,7 +12,7 @@ import java.net.http.HttpResponse;
 import org.json.simple.JSONObject;
 import static io.restassured.RestAssured.*;
 
-public class class02 {
+public class Trello {
 	public String url ="https://trello.com";
 	public String id;
 	public String lists;
