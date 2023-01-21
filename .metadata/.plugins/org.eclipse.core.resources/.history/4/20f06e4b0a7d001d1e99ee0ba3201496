@@ -1,8 +1,0 @@
-package Runner;
-
-import cucumber.api.testng.AbstractTestNGCucumberTests; 
-import io.cucumber.core.options.CucumberOptionsAnnotationParser.CucumberOptions;
-
-public class Testrunner {
-
-}

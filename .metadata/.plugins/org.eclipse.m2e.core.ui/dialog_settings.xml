@@ -47,6 +47,8 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="mobiletesting"/>
+			<item value="REST001"/>
 			<item value="Demoqa"/>
 			<item value="Datadriven"/>
 			<item value="OrangeHRM"/>
@@ -61,6 +63,8 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="mobiletesting"/>
+			<item value="REST001"/>
 			<item value="Demoqa"/>
 			<item value="Datadriven"/>
 			<item value="OrangeHRM"/>

@@ -1,9 +1,0 @@
-package satish12345;
-
-import org.testng.annotations.Test;
-
-public class paralleltest {
-  @Test
-  public void f() {
-  }
-}

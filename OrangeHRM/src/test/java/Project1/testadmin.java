@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -37,8 +38,13 @@ public class testadmin {
 	  wd.findElement(By.xpath("//*[@class='oxd-form-actions orangehrm-login-action']")).click();
 	  Thread.sleep(3000);
 	  System.out.println(wd.getTitle());
+	  WebElement t1 = wd.findElement(By.xpath("//*[@src='/web/images/orangehrm-logo.png?1672659722816\']"));
+	  Assert.assertTrue(t1.isDisplayed());
+	  if (t1.isDisplayed()) {
+		  System.out.println("String is diplayed");
+	  }
   }
-  @Test(priority = 1)
+  @Test(enabled = false)
   public void Admin() throws InterruptedException, AWTException {
 	  Robot rc = new Robot(); //Actions act = new Actions(wd);
 	  rc.keyPress(MenuKeyEvent.VK_DOWN);

@@ -1,9 +1,0 @@
-package datapakg;
-
-import org.testng.annotations.Test;
-
-public class Readexcel {
-  @Test
-  public void f() {
-  }
-}
