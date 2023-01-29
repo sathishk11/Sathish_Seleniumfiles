@@ -2,16 +2,21 @@ package Project1;
 
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.io.File;
+import java.io.IOException;
 
 import javax.swing.event.MenuKeyEvent;
 
-import org.openqa.selenium.Alert;
+import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -31,7 +36,7 @@ public class testadmin {
 	}
 	
   @Test(priority = 0)
-  public void Login() throws InterruptedException {
+  public void Login() throws InterruptedException, IOException {
 	  wd.findElement(By.name("username")).sendKeys("Admin");
 	  wd.findElement(By.name("password")).sendKeys("admin123");
 	  Thread.sleep(2000);
@@ -43,6 +48,8 @@ public class testadmin {
 	  if (t1.isDisplayed()) {
 		  System.out.println("String is diplayed");
 	  }
+	  File scr = ((TakesScreenshot)wd).getScreenshotAs(OutputType.FILE);    // take screenshot
+	  FileUtils.copyFile(scr, new File("C:\\Users\\Admin\\Pictures\\Screenshots\\screen.png"));
   }
   @Test(enabled = false)
   public void Admin() throws InterruptedException, AWTException {
@@ -64,6 +71,6 @@ public class testadmin {
   }
   @AfterTest
   public void AT() {
-	  wd.close();
+	 
   }
 }

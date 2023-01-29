@@ -11,7 +11,7 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class Generalstoreapp {
+public class Generalstoreapp extends Khan_appfile {
 
 	public static AndroidDriver<AndroidElement> generalstore() throws MalformedURLException{  // cap is method name it stores the values under method
 		DesiredCapabilities dc = new DesiredCapabilities();

@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mobiletesting1.hybridtest">
+      <class name="mobiletesting1.banjara_extent_report">
         <methods>
-          <include name="test2"/>
+          <include name="Select_Ride"/>
+          <include name="Login"/>
+          <include name="bt"/>
         </methods>
-      </class> <!-- mobiletesting1.hybridtest -->
+      </class> <!-- mobiletesting1.banjara_extent_report -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

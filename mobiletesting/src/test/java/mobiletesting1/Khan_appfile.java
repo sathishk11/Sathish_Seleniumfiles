@@ -11,7 +11,7 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class Khan_appfile {
+public class Khan_appfile extends BanjaraRide {
 	public static AndroidDriver<AndroidElement> khanapp() throws MalformedURLException{  // cap is method name it stores the values under method
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability(MobileCapabilityType.DEVICE_NAME,  "emulator-5554");
